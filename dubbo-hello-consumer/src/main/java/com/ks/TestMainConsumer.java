@@ -7,16 +7,16 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
-public class DemoConsumer {
+public class TestMainConsumer {
 
 	public static void main(String[] args) {
 		final String port = "8888";
 
 		// 测试常规服务
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:dubbo-config.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:dubbo-consumer.xml");
 		context.start();
 		TestService service = context.getBean(TestService.class);
-		System.out.println(service.sayHello("zzzz"));
+		System.out.println(service.sayHello("jxzhang"));
 	}
 
 }

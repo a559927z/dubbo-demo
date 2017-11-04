@@ -6,10 +6,8 @@
        http://code.alibabatech.com/schema/dubbo  
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-
-
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="test_consumer" />
+    <dubbo:application name="demo-consumer" owner="programmer" organization="dubbox"/>
 
     <!-- 使用zookeeper注册中心暴露服务地址 -->
     <dubbo:registry address="zookeeper://localhost:2181" />
