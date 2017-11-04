@@ -17,7 +17,7 @@ public class DemoConsumer {
 //		getUser("http://localhost:" + port + "/services/users/1.xml");
 
 		// 测试常规服务
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:META-INF/spring/*.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:dubbo-consumer-yjmyzz.xml");
 		context.start();
 		UserService userService = context.getBean(UserService.class);
 		System.out.println(userService.getUser(1L));
